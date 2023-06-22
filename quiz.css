@@ -1,0 +1,315 @@
+@font-face {
+    font-family: "head-font";
+    src: url(fonts/Geologica-VariableFont_CRSV\,SHRP\,slnt\,wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/background-body.png);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+}
+
+main {
+    padding: 10px;
+    width: 90%;
+    min-width: 340px;
+    max-width: 1000px;
+    height: 600px;
+    background-color: #fff;
+    border: 1px solid #585b619e;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.quiz-main-heading,
+.quiz-sub-heading {
+    font-family: "head-font";
+    color: #8800ff;
+    background: linear-gradient(to right, #8800ff, #ff00ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+main section {
+    width: 90%;
+    background: linear-gradient(to right, #8800ff, #ff00ff);
+    height: 75px;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+main section div {
+    background-color: #fff;
+    width: 99%;
+    height: 90%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "head-font";
+    color: #c400ff;
+}
+
+main section div:hover,
+main section div:active {
+    color: #fff;
+    background: linear-gradient(to right, #8800ff, #ff00ff);
+}
+
+@media screen and (max-width: 880px) {
+    .quiz-main-heading {
+        font-size: 25px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .quiz-sub-heading {
+        font-size: 20px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    main section div {
+        font-size: 20px;
+    }
+}
+
+#sign-out-btn {
+    margin-top: 35px;
+    padding: 10px 15px;
+    border: 2.5px solid #c400ff;
+    border-radius: 10px;
+    font-size: 18px;
+    background: none;
+    color: #c400ff;
+    font-family: "head-font";
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#sign-out-btn:hover,
+#sign-out-btn:active {
+    background: linear-gradient(to right, #8800ff, #ff00ff);
+    color: #fff;
+}
+
+@media screen and (max-width: 440px) {
+    .quiz-main-heading {
+        font-size: 23px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .quiz-sub-heading {
+        font-size: 18px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    main section div {
+        font-size: 19px;
+    }
+
+    #sign-out-btn {
+        padding: 6px 10px;
+        border-width: 2px;
+        font-size: 14px;
+    }
+}
+
+.quiz-timer {
+    width: 200px;
+    text-align: center;
+    font-size: 32px;
+    position: absolute;
+    top: -1px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: "head-font";
+    font-weight: 400;
+    color: #fff;
+    background: linear-gradient(to right, #8800ff, #ff00ff);
+    box-shadow: 0px 1px 5px #0000005b;
+    text-shadow: 0px 1px 5px #0000005b;
+}
+
+.quiz-question {
+    text-align: center;
+    width: 80%;
+    margin-bottom: 75px;
+    font-family: "head-font";
+    font-weight: 300;
+    font-size: 28px;
+    color: #8800ff;
+}
+
+label {
+    font-family: "head-font";
+    font-weight: 300;
+    font-size: 23px;
+    /* align-self: flex-start; */
+    border: 2px solid #8800ff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 7.5px;
+    width: 80%;
+    cursor: pointer;
+    color: #8800ff;
+    word-wrap: break-word;
+}
+
+.label-active {
+    background-color: #8800ff;
+    color: #fff;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.quiz-start-area {
+    display: none;
+}
+
+.next-btn {
+    display: block;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    background-color: #8800ff;
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    width: 100px;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-family: "head-font";
+}
+
+.next-btn:hover,
+.next-btn:active {
+    background-color: #ae5cf5;
+    transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 595px) {
+    label p {
+        font-size: 17px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .quiz-question {
+        margin-bottom: 30px;
+        font-size: 24px;
+    }
+}
+
+.result-modal-bg {
+    background-color: #0000007f;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.result-modal {
+    font-family: "head-font";
+    color: #8800ff;
+    padding: 10px;
+    width: 90%;
+    min-width: 340px;
+    max-width: 700px;
+    height: 500px;
+    background-color: #fff;
+    border: 1px solid #585b619e;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.result-modal h1 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.circular-progress {
+    width: 200px;
+    height: 200px;
+    background: conic-gradient(#8800ff 3.6deg, rgba(197, 109, 215, 0.1) 0deg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #585b619e;
+}
+
+.circular-progress::before {
+    content: '';
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #585b619e;
+}
+
+.circular-progress .progress-value {
+    font-size: 40px;
+    font-weight: 500;
+    position: relative;
+}
+
+.back-to-home {
+    margin-top: 35px;
+    padding: 10px 15px;
+    border: 2.5px solid #8800ff;
+    border-radius: 10px;
+    font-size: 18px;
+    background: none;
+    color: #8800ff;
+    font-family: "head-font";
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.back-to-home:hover,
+.back-to-home:active {
+    background: #8800ff;
+    color: #fff;
+}
+
+@media screen and (max-width: 595px) {
+    .result-modal h1 {
+        font-size: 25px;
+    }
+}

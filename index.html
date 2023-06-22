@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/icon.png">
+    <script defer src="app.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <section class="login-screen" id="login-screen">
+        <form class="form">
+            <p class="form-title">Sign in to your account</p>
+            <div class="input-container">
+                <input id="login-email-input" placeholder="Enter your email" type="email">
+            </div>
+            <div class="input-container">
+                <input id="login-password-input" placeholder="Enter your password" type="password">
+            </div>
+            <button id="login-btn" class="submit">Sign in</button>
+            <!-- <p class="signup-link">No account? <a href="javascript:void(0)" id="go-to-signup">Sign up</a></p> -->
+        </form>
+    </section>
+    <section class="signup-screen" id="signup-screen">
+        <form class="form">
+            <p class="form-title title-signup">Create a new account</p>
+            <div class="input-container">
+                <input id="get-username-input" placeholder="Enter your Username" type="email">
+            </div>
+            <div class="input-container">
+                <input id="get-email-input" placeholder="Enter your email" type="email">
+            </div>
+            <div class="input-container">
+                <input id="get-password-input" placeholder="Enter your password" type="password" maxlength="20">
+            </div>
+            <button id="signup-btn" class="submit">Sign up</button>
+            <!-- <p class="signup-link">Already have an account? <a href="javascript:void(0)" id="go-to-login">Sign In</a></p> -->
+        </form>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="quiz.css">
+    <script defer src="quiz.js"></script>
+</head>
+
+<body>
+    <main class="quiz-selection-area" id="quiz-selection-area">
+        <h1 class="quiz-main-heading">Welcome to Web Development Quiz ✨</h1>
+        <br>
+        <br>
+        <h2 class="quiz-sub-heading">Select a language to get started <br><br> ↓</h2>
+        <section>
+            <div id="htmlQuiz" onclick="startQuiz('html')">HTML</div>
+        </section>
+        <section>
+            <div id="cssQuiz" onclick="startQuiz('css')">CSS</div>
+        </section>
+        <section>
+            <div id="jsQuiz" onclick="startQuiz('js')">JAVASCRIPT</div>
+        </section>
+        <button id="sign-out-btn" onclick="signOutOfQuiz()">SIGN OUT</button>
+    </main>
+
+    <main class="quiz-start-area" id="quiz-start-area">
+        <div class="quiz-timer">2:00</div>
+        <h1 class="quiz-question" id="quiz-question">Q1 : Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h1>
+        <label onclick="selectedOption()">
+            <input type="radio" name="answers" value="1">
+            <p id="option-1">option 1</p>
+        </label>
+        <label onclick="selectedOption()">
+            <input type="radio" name="answers" value="2">
+            <p id="option-2">option 2</p>
+        </label>
+        <label onclick="selectedOption()">
+            <input type="radio" name="answers" value="3">
+            <p id="option-3">option 3</p>
+        </label>
+        <label onclick="selectedOption()">
+            <input type="radio" name="answers" value="4">
+            <p id="option-4">option 4</p>
+        </label>
+        <button class="next-btn" id="next-btn" onclick="nextQuestion()">Next</button>
+    </main>
+
+    <div class="result-modal-bg">
+        <div class="result-modal">
+            <h1>Your Result :</h1>
+
+            <div class="circular-progress">
+                <span class="progress-value">0%</span>
+            </div>
+
+            <button class="back-to-home" onclick="removeResultModal()">Ok</button>
+        </div>
+    </div>
+</body>
+
+</html>
